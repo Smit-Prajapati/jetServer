@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100dvh;
+  margin: 0;
+  background-color: #c6dff2;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100dvh;
+}
+
+.svg-container {
+  position: relative;
+  width: 90%;
+  aspect-ratio: 1;
+}
+
+#cloud {
+  animation: float 8s ease-in-out infinite;
+}
+
+.text-ram {
+  transition: all 0.9s ease;
+  transform-origin: center;
+  opacity: 0;
+  font-weight: 900;
+  font-size: 8rem;
+  font-family: "Big Shoulders Display", sans-serif;
+  scale: 2;
+}
+
+text {
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+.active-text {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+  scale: 1;
+}
+
+.slide-out {
+  opacity: 0;
+  filter: blur(5px);
+}
+
+.slide-in {
+  scale: 1;
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.hidden-text {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-5%);
+  scale: 0;
+}
+
+.text-group-ssd {
+  transform: translate(-7%, 6%);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3%);
+  }
+}
+.text-group2 {
+  transform: translate(17%, 13%);
+  position: relative;
+}
+.text-group2 text {
+  font-size: 2rem;
+}
+
+.cloud {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+  animation: float 8s ease-in-out infinite;
+}
+
+.cloud.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0, 0);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+.cloud.animated {
+  animation: popup 1.5s ease-in-out;
+}
+
+#ssd-clouds .cloud .text-content {
+  font-size: 2rem;
+  font-weight: 800;
+}
+#ssd-clouds .cloud:nth-child(1) {
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+#ssd-clouds .cloud:nth-child(1) .text-content {
+  transform: translate(17%, 16%);
+}
+#ssd-clouds .cloud:nth-child(2) {
+  transform-origin: 65% 60%;
+}
+#ssd-clouds .cloud:nth-child(2) .text-content {
+  font-size: 1.5rem;
+  transform: translate(8%, 18%);
+}
+#ssd-clouds .cloud:nth-child(3) {
+  transform-origin: 70% 60%;
+}
+#ssd-clouds .cloud:nth-child(3) .text-content {
+  font-size: 1.5rem;
+  transform: translate(26%, 18%);
+}
+
+.ram-input-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ssd-storage-select-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+select {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  box-shadow: 0px 4px 7px 0px rgba(160, 163, 177, 0.231372549);
+  border-radius: 0.5rem;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: white;
+  box-shadow: 0px 4px 7px 0px rgba(160, 163, 177, 0.231372549);
+  border-radius: 0.5rem;
+}
+
+#cloud1,
+#cloud2,
+#cloud3 {
+  filter: drop-shadow(0px 0px 10px rgba(55, 118, 174, 0.684));
+}
+
+.ssd-select-container {
+  /* Let the select take available space */
+}
+
+#addStorageButton {
+  flex-basis: 100%;
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+}
+#addStorageButton:active {
+  scale: 0.95;
+}/*# sourceMappingURL=style.css.map */
